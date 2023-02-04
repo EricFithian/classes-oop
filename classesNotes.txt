@@ -1,0 +1,5 @@
+Classes are a way to create a ton of objects
+They use the start of class nameOfClass {}
+They have constructor functions that setup all of the inputs they will take
+You can still use dot notation on the objects you create from the classes with OOP
+When we're extending any of the classes, we are going to take in all of the functionality of the class it's inheriting. 
