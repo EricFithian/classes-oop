@@ -25,7 +25,9 @@ console.log(sumMultiplesOfThreeAndFive(1000)); //Gives me 233168
 
 
 function factor(num1, num2) {
-    if(num1 % num2 === 0) return true;
+    if(num1 % num2 === 0) {
+        return true
+    };
     return false;
 }
 
@@ -37,11 +39,14 @@ function prime(num) {
 }
 
 function largestPrimeFactor(num) {
-    for(let i = num; i > 0; i--) {
-        console.log(`i is ${i} and it is a factor? ${factor(num, i)}`)
+    if(prime(num)) return num;
+    for(let i = num/2; i > 0; i--) {
+        // console.log(`i is ${i} and it is a factor? ${factor(num, i)}`)
         if(factor(num, i) && prime(i)) return i;
     }
     return "No solution";
 }
 
-console.log(largestPrimeFactor(13195))
+console.log(largestPrimeFactor(13195)) //expects 29
+console.log(largestPrimeFactor(10)) //expects 5
+console.log(largestPrimeFactor(600851475143)) //expects 5
